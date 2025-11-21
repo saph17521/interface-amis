@@ -12,7 +12,7 @@ float AccX, AccY, AccZ, AngleRoll, AnglePitch, AngleYaw;
 
 // Fonction pour récupérer les données du MPU6050
 void lireMPU6050() {
-  Wire.beginTransmission(0x68);
+  Wire.beginTransmission(0x68); // Adresse I2C du MPU6050
   Wire.write(0x3B);
   Wire.endTransmission();
   Wire.requestFrom(0x68, 6);
